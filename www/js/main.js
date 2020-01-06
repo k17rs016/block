@@ -2,9 +2,9 @@
     
 var SETTINGS_GRAVITY = 0.07,
     SETTINGS_FPS = 30,
-    SETTINGS_BALL_NUM = 1,
+    SETTINGS_BALL_NUM = 9,
     SETTINGS_BOUND_X = 0.13+0.09,
-    SETTINGS_BOUND_Y = 1.04*10%3-0.05,
+    SETTINGS_BOUND_Y = 1.04 *10%3-0.05,
     SETTINGS_ACCELEROMETER_RELOAD_FREQ = 100,
     SETTINGS_PADDLE_ACCEL = 2.8,
     SETTINGS_POINT = 1000,
@@ -42,15 +42,39 @@ var BB = {
     // Create blocks map
     setMap: function() {
         var blockMap = [
-            [null,   'gold','gold','gold',  'gold',    null,       null,       null,       null,       'blue',     null,       null,       null,       null],
-            [null,      null,       null,       null,       'red',      'red',      'blue',     null,       null,       null],
-            [null,      null,       null,       'red',      'red',      null,       null,       'blue',     null,       null],
-            [null,      null,       'red',      'red',      null,       null,       null,       null,       'blue',     null],    
-            [null,      'red',      'red',      null,       null,       'gold',     null,       null,       'silver',   'silver'],    
-            [null,      null,       'red',      'red',       null,       null,       null,       'silver',   'silver',   null],    
-            [null,      null,       null,       'red',      'red',       null,       'silver',   'silver',   null,       null],    
-            [null,      null,       null,       null,       'silver',   'silver',   'silver',   null,       null,       null],
-            [null,      null,       null,       null,       null,       'silver',  'gold',  'gold','gold',  'gold',  null,       null,      ]
+         /*  [null,      null,       null, 
+             null,     null,       'gold',
+             null,      null,       null,       null,      null],*/
+            ['red',      'red',       'red', 
+             'red',      'red',       'gold',
+             'red',      'red',       'red',      
+             'red',      'red'],
+            ['red',      'red',       'red', 
+             'red',      'gold',       'gold',
+             'gold',      'red',       'red',      
+             'red',      'red'],
+            ['gold',      'gold',       'gold', 
+             'gold',      'gold',       'gold',
+             'gold',      'gold',       'gold',       'gold',      'gold'],
+            ['gold',      'gold',       'gold', 
+             'gold',      'gold',       'gold',
+             'gold',      'gold',       'gold',       'gold',      'gold'],    
+            ['gold',      'gold',       'gold', 
+             'gold',      'gold',       'gold',
+             'gold',      'gold',       'gold',       'gold',      'gold'],    
+            ['gold',      'gold',       'gold', 
+             'gold',      'gold',       'gold',
+             'gold',      'gold',       'gold',       'gold',      'gold'],    
+            ['gold',      'gold',       'gold', 
+             'gold',      'gold',       'gold',
+             'gold',      'gold',       'gold',       'gold',      'gold'],    
+            ['gold',      'gold',       'gold', 
+             'gold',      'gold',       'gold',
+             'gold',      'gold',       'gold',       'gold',      'gold'],
+             ['gold',      'gold',       'gold', 
+             'gold',      'gold',       'gold',
+             'gold',      'gold',       'gold',       'gold',      'gold']
+            //['blue',      'blue',      'blue',       'blue',       'blue',       'blue',     'blue',       'blue',       'blue',       'blue','blue'    ]
         ];
         
         for(j = 0; j < blockMap.length; j++) {
